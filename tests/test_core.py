@@ -1904,7 +1904,9 @@ int main(int argc, char **argv) {
       self.skipTest('main module support for non-wasm')
     if '-fsanitize=address' in self.emcc_args:
       self.skipTest('no dynamic library support in asan yet')
-    self.emcc_args += args + ['-s', 'EXPORTED_FUNCTIONS=_main,_malloc']
+    self.emcc_args += args
+    if 'MAIN_MODULE' not in args:
+      self.emcc_args += ['-s', 'EXPORTED_FUNCTIONS=_main,_malloc']
 
     self.do_core_test('test_em_js.cpp', force_c=force_c)
     self.assertContained("no args returning int", read_file('test_em_js.js'))
