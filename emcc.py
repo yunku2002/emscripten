@@ -1868,6 +1868,7 @@ def phase_linker_setup(options, state, newargs, settings_map):
       '_emscripten_sync_run_in_main_thread_2',
       '_emscripten_sync_run_in_main_thread_4',
       '_emscripten_tls_init',
+      '_emscripten_thread_exit',
       '_pthread_self',
       '_pthread_testcancel',
       '_pthread_exit',

@@ -221,7 +221,7 @@ self.onmessage = function(e) {
         // In MINIMAL_RUNTIME the noExitRuntime concept does not apply to
         // pthreads. To exit a pthread with live runtime, use the function
         // emscripten_unwind_to_js_event_loop() in the pthread body.
-        // The thread might have finished without calling pthread_exit(). If so,
+        // The thread might have finished without calling emscripten_thread_exit(). If so,
         // then perform the exit operation ourselves.
         // (This is a no-op if explicit pthread_exit() had been called prior.)
         Module['_pthread_exit'](result);

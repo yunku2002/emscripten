@@ -425,8 +425,8 @@ void __wait(volatile int *addr, volatile int *waiters, int val, int priv) {}
 
 static struct pthread __main_pthread;
 
-pthread_t __pthread_self(void) {
-  return &__main_pthread;
+uintptr_t __get_tp(void) {
+  return (uintptr_t)&__main_pthread;
 }
 
 __attribute__((constructor))
