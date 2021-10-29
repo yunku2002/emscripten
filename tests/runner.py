@@ -47,12 +47,12 @@ logger = logging.getLogger("runner")
 
 # The core test modes
 core_test_modes = [
-  'wasm0',
-  'wasm1',
-  'wasm2',
-  'wasm3',
-  'wasms',
-  'wasmz',
+  'core0',
+  'core1',
+  'core2',
+  'core3',
+  'cores',
+  'corez',
   'strict',
   'wasm2js0',
   'wasm2js1',
@@ -64,7 +64,7 @@ core_test_modes = [
 ]
 
 # The default core test mode, used when none is specified
-default_core_test_mode = 'wasm0'
+default_core_test_mode = 'core0'
 
 # The non-core test modes
 non_core_test_modes = [
